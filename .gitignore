@@ -1,0 +1,19 @@
+# Ignorar la carpeta del entorno virtual
+venv/
+
+# Archivos y carpetas de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos relacionados con sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
