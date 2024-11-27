@@ -1,0 +1,209 @@
+comuna;estacion;error_inclusion;error_exclusion
+Alhué;invierno;2;0
+Alhué;otoño;1;0
+Alhué;primavera;0;0
+Alhué;verano;3;0
+Buin;invierno;9;0
+Buin;otoño;9;0
+Buin;primavera;6;0
+Buin;verano;11;0
+Calera de Tango;invierno;3;0
+Calera de Tango;otoño;2;0
+Calera de Tango;primavera;8;0
+Calera de Tango;verano;6;0
+Cerrillos;invierno;8;0
+Cerrillos;otoño;9;0
+Cerrillos;primavera;7;0
+Cerrillos;verano;5;0
+Cerro Navia;invierno;15;0
+Cerro Navia;otoño;19;0
+Cerro Navia;primavera;20;0
+Cerro Navia;verano;14;0
+Colina;invierno;19;0
+Colina;otoño;17;0
+Colina;primavera;23;0
+Colina;verano;17;0
+Conchalí;invierno;15;0
+Conchalí;otoño;19;0
+Conchalí;primavera;19;0
+Conchalí;verano;16;0
+Curacaví;invierno;5;0
+Curacaví;otoño;2;0
+Curacaví;primavera;4;0
+Curacaví;verano;3;0
+El Bosque;invierno;20;0
+El Bosque;otoño;11;0
+El Bosque;primavera;23;0
+El Bosque;verano;17;0
+El Monte;invierno;5;0
+El Monte;otoño;2;0
+El Monte;primavera;6;0
+El Monte;verano;4;0
+Estación Central;invierno;12;0
+Estación Central;otoño;13;0
+Estación Central;primavera;13;0
+Estación Central;verano;22;0
+Huechuraba;invierno;17;0
+Huechuraba;otoño;14;0
+Huechuraba;primavera;14;0
+Huechuraba;verano;16;0
+Independencia;invierno;15;0
+Independencia;otoño;7;0
+Independencia;primavera;11;0
+Independencia;verano;4;0
+Isla de Maipo;invierno;6;0
+Isla de Maipo;otoño;3;0
+Isla de Maipo;primavera;5;0
+Isla de Maipo;verano;1;0
+La Cisterna;invierno;13;0
+La Cisterna;otoño;8;0
+La Cisterna;primavera;16;0
+La Cisterna;verano;11;0
+La Florida;invierno;25;0
+La Florida;otoño;44;0
+La Florida;primavera;46;0
+La Florida;verano;50;0
+La Granja;invierno;10;0
+La Granja;otoño;21;0
+La Granja;primavera;14;0
+La Granja;verano;13;0
+La Pintana;invierno;23;0
+La Pintana;otoño;21;0
+La Pintana;primavera;23;0
+La Pintana;verano;26;0
+La Reina;invierno;12;0
+La Reina;otoño;18;0
+La Reina;primavera;8;0
+La Reina;verano;15;0
+Lampa;invierno;12;0
+Lampa;otoño;6;0
+Lampa;primavera;15;0
+Lampa;verano;10;0
+Las Condes;invierno;26;0
+Las Condes;otoño;30;0
+Las Condes;primavera;21;0
+Las Condes;verano;21;0
+Lo Barnechea;invierno;11;0
+Lo Barnechea;otoño;6;0
+Lo Barnechea;primavera;11;0
+Lo Barnechea;verano;14;0
+Lo Espejo;invierno;17;0
+Lo Espejo;otoño;16;0
+Lo Espejo;primavera;13;0
+Lo Espejo;verano;14;0
+Lo Prado;invierno;15;0
+Lo Prado;otoño;11;0
+Lo Prado;primavera;8;0
+Lo Prado;verano;11;0
+Macul;invierno;7;0
+Macul;otoño;12;0
+Macul;primavera;12;0
+Macul;verano;10;0
+Maipú;invierno;63;0
+Maipú;otoño;61;0
+Maipú;primavera;43;0
+Maipú;verano;56;0
+María Pinto;invierno;0;0
+María Pinto;otoño;3;0
+María Pinto;primavera;1;0
+María Pinto;verano;2;0
+Melipilla;invierno;23;0
+Melipilla;otoño;13;0
+Melipilla;primavera;14;0
+Melipilla;verano;16;0
+Padre Hurtado;invierno;4;0
+Padre Hurtado;otoño;11;0
+Padre Hurtado;primavera;4;0
+Padre Hurtado;verano;6;0
+Paine;invierno;5;0
+Paine;otoño;17;0
+Paine;primavera;10;0
+Paine;verano;11;0
+Pedro Aguirre Cerda;invierno;16;0
+Pedro Aguirre Cerda;otoño;11;0
+Pedro Aguirre Cerda;primavera;13;0
+Pedro Aguirre Cerda;verano;11;0
+Peñaflor;invierno;8;0
+Peñaflor;otoño;8;0
+Peñaflor;primavera;16;0
+Peñaflor;verano;11;0
+Peñalolén;invierno;31;0
+Peñalolén;otoño;18;0
+Peñalolén;primavera;25;0
+Peñalolén;verano;27;0
+Pirque;invierno;1;0
+Pirque;otoño;4;0
+Pirque;primavera;2;0
+Pirque;verano;0;0
+Providencia;invierno;17;0
+Providencia;otoño;18;0
+Providencia;primavera;14;0
+Providencia;verano;19;0
+Pudahuel;invierno;26;0
+Pudahuel;otoño;24;0
+Pudahuel;primavera;18;0
+Pudahuel;verano;34;0
+Puente Alto;invierno;51;0
+Puente Alto;otoño;83;0
+Puente Alto;primavera;79;0
+Puente Alto;verano;83;0
+Quilicura;invierno;35;0
+Quilicura;otoño;25;0
+Quilicura;primavera;23;0
+Quilicura;verano;34;0
+Quinta Normal;invierno;12;0
+Quinta Normal;otoño;15;0
+Quinta Normal;primavera;14;0
+Quinta Normal;verano;9;0
+Recoleta;invierno;13;0
+Recoleta;otoño;27;0
+Recoleta;primavera;15;0
+Recoleta;verano;25;0
+Renca;invierno;18;0
+Renca;otoño;21;0
+Renca;primavera;14;0
+Renca;verano;13;0
+San Bernardo;invierno;31;0
+San Bernardo;otoño;36;0
+San Bernardo;primavera;35;0
+San Bernardo;verano;37;0
+San Joaquín;invierno;9;0
+San Joaquín;otoño;6;0
+San Joaquín;primavera;8;0
+San Joaquín;verano;6;0
+San José de Maipo;invierno;3;0
+San José de Maipo;otoño;2;0
+San José de Maipo;primavera;1;0
+San José de Maipo;verano;4;0
+San Miguel;invierno;10;0
+San Miguel;otoño;12;0
+San Miguel;primavera;13;0
+San Miguel;verano;17;0
+San Pedro;invierno;0;0
+San Pedro;otoño;1;0
+San Pedro;primavera;2;0
+San Pedro;verano;1;0
+San Ramón;invierno;17;0
+San Ramón;otoño;13;0
+San Ramón;primavera;4;0
+San Ramón;verano;12;0
+Santiago;invierno;46;0
+Santiago;otoño;47;0
+Santiago;primavera;53;0
+Santiago;verano;52;0
+Talagante;invierno;8;0
+Talagante;otoño;7;0
+Talagante;primavera;8;0
+Talagante;verano;13;0
+Tiltil;invierno;3;0
+Tiltil;otoño;4;0
+Tiltil;primavera;3;0
+Tiltil;verano;2;0
+Vitacura;invierno;11;0
+Vitacura;otoño;12;0
+Vitacura;primavera;8;0
+Vitacura;verano;7;0
+Ñuñoa;invierno;16;0
+Ñuñoa;otoño;19;0
+Ñuñoa;primavera;24;0
+Ñuñoa;verano;35;0

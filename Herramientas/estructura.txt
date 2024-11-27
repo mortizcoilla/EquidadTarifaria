@@ -19,6 +19,7 @@
     |-- sim4.py
     |-- test.py
     |-- verificar_rutas.py
+|-- README.md
 |-- datos
     |-- clientes
         |-- clientes_simulados.csv

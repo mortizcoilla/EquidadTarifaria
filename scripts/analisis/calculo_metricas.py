@@ -1,35 +1,34 @@
 import pandas as pd
 
-# Rutas de los archivos
-errores_file = "resultados/errores_inclusion_exclusion.csv"
+# Configuración
 beneficios_file = "resultados/beneficios_aportes.csv"
+errores_file = "resultados/errores_inclusion_exclusion.csv"
+output_comuna_eficiencia = "resultados/resumen_beneficios_aportes_por_comuna_eficiencia.csv"
+output_errores_comuna = "resultados/resumen_errores_por_comuna_estacion.csv"
 
-# Leer datos
-errores_data = pd.read_csv(errores_file, sep=";")
+# Leer datos de beneficios y errores
+print(f"Cargando datos de beneficios desde {beneficios_file}...")
 beneficios_data = pd.read_csv(beneficios_file, sep=";")
+print(f"Cargando datos de errores desde {errores_file}...")
+errores_data = pd.read_csv(errores_file, sep=";")
 
-# 1. Resumen de errores
-inclusion_errors = errores_data["error_inclusion"].sum()
-exclusion_errors = errores_data["error_exclusion"].sum()
-total_errors = inclusion_errors + exclusion_errors
+# Manejo de columna 'estacion'
+if "estacion" not in errores_data.columns:
+    print("Advertencia: 'estacion' no encontrada. Asignando 'desconocido'.")
+    errores_data["estacion"] = "desconocido"
 
-print("Resumen de Errores:")
-print(f"Errores de Inclusión: {inclusion_errors}")
-print(f"Errores de Exclusión: {exclusion_errors}")
-print(f"Errores Totales: {total_errors}")
+# Resumen de beneficios y aportes por comuna y eficiencia energética
+print("Calculando beneficios y aportes por comuna y eficiencia energética...")
+beneficios_por_comuna_eficiencia = beneficios_data.groupby(["comuna", "eficiencia_energetica"])[["ajuste_tarifario"]].sum()
 
-# 2. Errores por comuna
-errores_por_comuna = errores_data.groupby("comuna")[["error_inclusion", "error_exclusion"]].sum()
-print("\nErrores por Comuna:")
-print(errores_por_comuna)
+# Guardar resultados de beneficios por comuna
+beneficios_por_comuna_eficiencia.to_csv(output_comuna_eficiencia, sep=";")
+print(f"Resumen guardado en {output_comuna_eficiencia}.")
 
-# Guardar el resumen por comuna (opcional)
-errores_por_comuna.to_csv("resultados/resumen_errores_por_comuna.csv", sep=";")
+# Resumen de errores por comuna y estación
+print("Calculando errores por comuna y estación...")
+errores_por_comuna = errores_data.groupby(["comuna", "estacion"])[["error_inclusion", "error_exclusion"]].sum()
 
-# 3. Beneficios y aportes por comuna
-beneficios_por_comuna = beneficios_data.groupby("comuna")["ajuste_tarifario"].sum()
-print("\nBeneficios y Aportes por Comuna:")
-print(beneficios_por_comuna)
-
-# Guardar el resumen de beneficios/aportes por comuna (opcional)
-beneficios_por_comuna.to_csv("resultados/resumen_beneficios_aportes_por_comuna.csv", sep=";")
+# Guardar resultados de errores por comuna
+errores_por_comuna.to_csv(output_errores_comuna, sep=";")
+print(f"Resumen guardado en {output_errores_comuna}.")
