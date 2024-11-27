@@ -17,3 +17,6 @@ Thumbs.db
 # Archivos de configuración de IDEs
 .idea/
 .vscode/
+
+#datos
+datos/
