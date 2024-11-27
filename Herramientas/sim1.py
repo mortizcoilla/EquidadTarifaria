@@ -1,24 +1,32 @@
 import pandas as pd
 import random
+import numpy as np
 
-# Datos simulados
-comunas = ["Santiago", "Ñuñoa", "Providencia", "Las Condes", "Vitacura"]
-tarifas = ["RESIDENCIAL", "NO_RESIDENCIAL"]
-num_clientes = 100  # Número de clientes simulados
+# Configuración de simulación
+comunas = ["Las Condes", "Providencia", "Santiago", "Vitacura", "Ñuñoa", 
+           "Puente Alto", "La Florida", "Maipú", "Quilicura", "Lo Barnechea"]
+tipos_cliente = ["RESIDENCIAL", "COMERCIAL", "INDUSTRIAL"]
 
-# Generar datos
-data = {
-    "nro_medidor": [f"100{str(i).zfill(3)}" for i in range(1, num_clientes + 1)],
-    "comuna": [random.choice(comunas) for _ in range(num_clientes)],
-    "clave_tarifa": [random.choice(tarifas) for _ in range(num_clientes)],
-    "Tipo_consumo": ["RESIDENCIAL" if t == "RESIDENCIAL" else "NO_RESIDENCIAL" for t in tarifas],
-    "coord_x": [round(random.uniform(-70.7, -70.5), 6) for _ in range(num_clientes)],
-    "coord_y": [round(random.uniform(-33.6, -33.4), 6) for _ in range(num_clientes)],
-}
+# Parámetros ajustables
+n_clientes_por_comuna = 500  # Número de clientes simulados por comuna
+consumo_base = {"RESIDENCIAL": 150, "COMERCIAL": 300, "INDUSTRIAL": 1000}
+variabilidad = {"RESIDENCIAL": 50, "COMERCIAL": 100, "INDUSTRIAL": 300}
+
+# Generar datos simulados
+data_simulada = []
+for comuna in comunas:
+    for _ in range(n_clientes_por_comuna):
+        tipo_cliente = random.choice(tipos_cliente)
+        consumo = round(np.random.normal(loc=consumo_base[tipo_cliente], scale=variabilidad[tipo_cliente]), 2)
+        consumo = max(0, consumo)  # Evitar consumos negativos
+        coord_x = round(random.uniform(-70.75, -70.5), 6)  # Coordenadas ficticias
+        coord_y = round(random.uniform(-33.6, -33.4), 6)
+        data_simulada.append([comuna, tipo_cliente, consumo, coord_x, coord_y])
 
 # Crear DataFrame
-df = pd.DataFrame(data)
+df_simulada = pd.DataFrame(data_simulada, columns=["comuna", "tipo_cliente", "consumo_mensual", "coord_x", "coord_y"])
 
-# Guardar archivo
-df.to_csv("Archivo n1 v2.csv", sep=";", index=False)
-print("Archivo 'Archivo n1 v2.csv' generado.")
+# Guardar en el archivo esperado por el flujo
+output_file = "datos/clientes/clientes_simulados.csv"
+df_simulada.to_csv(output_file, index=False)
+print(f"Datos simulados generados y guardados en {output_file}")

@@ -1,46 +1,33 @@
 import os
 
-# Estructura de carpetas
-estructura = {
-    "datos": [
-        "clientes",
-        "consumos_mensuales",
-        "consumos_semanales",
-        "geoespacial"
-    ],
-    "scripts": [],
-    "resultados": [
-        "errores_por_comuna",
-        "visualizaciones"
-    ],
-    "documentos": []
-}
+# Lista de carpetas a ignorar
+CARPETAS_IGNORADAS = {'.git', '.github', '.ipynb_checkpoints', 'node_modules', 'backups','venv'}
 
-# Nombre del proyecto
-nombre_proyecto = "proyecto_equidad_tarifaria"
-
-def crear_estructura(base_dir, estructura):
-    """
-    Crea una estructura de carpetas basada en un diccionario.
-    """
-    for carpeta, subcarpetas in estructura.items():
-        # Crear la carpeta principal
-        carpeta_path = os.path.join(base_dir, carpeta)
-        os.makedirs(carpeta_path, exist_ok=True)
-        print(f"Carpeta creada: {carpeta_path}")
+def obtener_estructura_directorio(ruta_directorio, nivel=0):
+    estructura = ""
+    archivos_y_directorios = sorted(os.listdir(ruta_directorio))
+    
+    for elemento in archivos_y_directorios:
+        # Verificamos que el elemento no esté en la lista de carpetas ignoradas
+        if elemento in CARPETAS_IGNORADAS:
+            continue
         
-        # Crear subcarpetas
-        for subcarpeta in subcarpetas:
-            subcarpeta_path = os.path.join(carpeta_path, subcarpeta)
-            os.makedirs(subcarpeta_path, exist_ok=True)
-            print(f"Subcarpeta creada: {subcarpeta_path}")
+        ruta_elemento = os.path.join(ruta_directorio, elemento)
+        estructura += "    " * nivel + "|-- " + elemento + "\n"
+        
+        if os.path.isdir(ruta_elemento):
+            estructura += obtener_estructura_directorio(ruta_elemento, nivel + 1)
+    
+    return estructura
 
-# Crear estructura de carpetas
+def imprimir_estructura_proyecto(ruta_proyecto):
+    estructura = obtener_estructura_directorio(ruta_proyecto)
+    print(estructura)
+    return estructura
+
 if __name__ == "__main__":
-    base_dir = os.path.join(os.getcwd(), nombre_proyecto)
-    os.makedirs(base_dir, exist_ok=True)
-    print(f"Directorio base creado: {base_dir}")
-    crear_estructura(base_dir, estructura)
-
-    # Mensaje final
-    print("\nEstructura de carpetas generada exitosamente.")
+    ruta_proyecto = "/home/makabrus/Workspace/EquidadTarifaria"
+    estructura = imprimir_estructura_proyecto(ruta_proyecto)
+    
+    with open(os.path.join("/home/makabrus/Workspace/EquidadTarifaria/Herramientas", "estructura.txt"), "w") as archivo:
+        archivo.write(estructura)

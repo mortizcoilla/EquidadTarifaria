@@ -1,0 +1,53 @@
+|-- .gitignore
+|-- Herramientas
+    |-- crearshapefile.py
+    |-- estructura.py
+    |-- estructura.txt
+    |-- sim1.py
+    |-- sim2.py
+    |-- sim3.py
+    |-- sim4.py
+    |-- test.py
+    |-- verificar_rutas.py
+|-- datos
+    |-- clientes
+        |-- clientes_simulados.csv
+    |-- consumos_mensuales
+        |-- Las Condes_consumos_mensuales.csv
+        |-- Providencia_consumos_mensuales.csv
+        |-- Santiago_consumos_mensuales.csv
+        |-- Vitacura_consumos_mensuales.csv
+        |-- Ñuñoa_consumos_mensuales.csv
+    |-- consumos_semanales
+        |-- Las Condes_consumos_semanales.csv
+        |-- Providencia_consumos_semanales.csv
+        |-- Santiago_consumos_semanales.csv
+        |-- Vitacura_consumos_semanales.csv
+        |-- Ñuñoa_consumos_semanales.csv
+    |-- geoespacial
+        |-- CSE_SANTIAGO_UV_RSH_FINAL.cpg
+        |-- CSE_SANTIAGO_UV_RSH_FINAL.dbf
+        |-- CSE_SANTIAGO_UV_RSH_FINAL.prj
+        |-- CSE_SANTIAGO_UV_RSH_FINAL.shp
+        |-- CSE_SANTIAGO_UV_RSH_FINAL.shx
+|-- documentos
+|-- flujo_analisis.py
+|-- main.py
+|-- resultados
+    |-- beneficios_aportes.csv
+    |-- errores_inclusion_exclusion.csv
+    |-- errores_por_comuna
+    |-- visualizaciones
+        |-- graficos
+|-- scripts
+    |-- analisis
+        |-- BeneficiosAportes.py
+        |-- CasoBase.py
+        |-- ConsumoMensual.py
+        |-- Errores.py
+        |-- Sensibilidad.py
+        |-- calculo_metricas.py
+    |-- visualizaciones
+        |-- visualizacion.py
+        |-- visualizaciones.py
+        |-- visualizaciones_metricas.py
